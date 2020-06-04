@@ -1,0 +1,45 @@
+2020-06-04T06:37:14.0210141Z ##[section]Starting: Request a runner to run this job
+2020-06-04T06:37:14.1994735Z Can't find any online and idle self-hosted runner in current repository that matches the required labels: 'ubuntu-latest'
+2020-06-04T06:37:14.1994782Z Can't find any online and idle self-hosted runner in current repository's account/organization that matches the required labels: 'ubuntu-latest'
+2020-06-04T06:37:14.1994810Z Found online and idle hosted runner in current repository's account/organization that matches the required labels: 'ubuntu-latest'
+2020-06-04T06:37:14.4885756Z ##[section]Finishing: Request a runner to run this job
+2020-06-04T06:37:20.0298836Z Current runner version: '2.263.0'
+2020-06-04T06:37:20.0325430Z ##[group]Operating System
+2020-06-04T06:37:20.0326040Z Ubuntu
+2020-06-04T06:37:20.0326238Z 18.04.4
+2020-06-04T06:37:20.0326430Z LTS
+2020-06-04T06:37:20.0326576Z ##[endgroup]
+2020-06-04T06:37:20.0326770Z ##[group]Virtual Environment
+2020-06-04T06:37:20.0327049Z Environment: ubuntu-18.04
+2020-06-04T06:37:20.0327264Z Version: 20200518.1
+2020-06-04T06:37:20.0327507Z Included Software: https://github.com/actions/virtual-environments/blob/ubuntu18/20200518.1/images/linux/Ubuntu1804-README.md
+2020-06-04T06:37:20.0327757Z ##[endgroup]
+2020-06-04T06:37:20.0328687Z Prepare workflow directory
+2020-06-04T06:37:20.0557723Z Prepare all required actions
+2020-06-04T06:37:20.0569876Z Download action repository 'actions/hello-world-docker-action@v1'
+2020-06-04T06:37:21.2669096Z Build container for action use: '/home/runner/work/_actions/actions/hello-world-docker-action/v1/Dockerfile'.
+2020-06-04T06:37:21.2726461Z ##[command]/usr/bin/docker build -t 3888d3:d2f2296a374941dda5ba6d3c261db156 -f "/home/runner/work/_actions/actions/hello-world-docker-action/v1/Dockerfile" "/home/runner/work/_actions/actions/hello-world-docker-action/v1"
+2020-06-04T06:37:22.1954698Z Sending build context to Docker daemon   7.68kB
+2020-06-04T06:37:22.1954888Z 
+2020-06-04T06:37:22.1955088Z Step 1/3 : FROM alpine:3.10
+2020-06-04T06:37:22.1955283Z  ---> be4e4bea2c2e
+2020-06-04T06:37:22.1955476Z Step 2/3 : COPY entrypoint.sh /entrypoint.sh
+2020-06-04T06:37:23.0238743Z  ---> 361629e896b4
+2020-06-04T06:37:23.0243025Z Step 3/3 : ENTRYPOINT ["/entrypoint.sh"]
+2020-06-04T06:37:23.0243296Z  ---> Running in 43f2bfba8403
+2020-06-04T06:37:23.0243518Z Removing intermediate container 43f2bfba8403
+2020-06-04T06:37:23.0244236Z  ---> dd5b257a0973
+2020-06-04T06:37:23.0244440Z Successfully built dd5b257a0973
+2020-06-04T06:37:23.0244736Z Successfully tagged 3888d3:d2f2296a374941dda5ba6d3c261db156
+2020-06-04T06:37:23.0346628Z ##[group]Run actions/hello-world-docker-action@v1
+2020-06-04T06:37:23.0346970Z with:
+2020-06-04T06:37:23.0347200Z   who-to-greet: Mr. Stark
+2020-06-04T06:37:23.0347344Z ##[endgroup]
+2020-06-04T06:37:23.0395977Z ##[command]/usr/bin/docker run --name d3d2f2296a374941dda5ba6d3c261db156_144941 --label 3888d3 --workdir /github/workspace --rm -e INPUT_WHO-TO-GREET -e HOME -e GITHUB_JOB -e GITHUB_REF -e GITHUB_SHA -e GITHUB_REPOSITORY -e GITHUB_REPOSITORY_OWNER -e GITHUB_RUN_ID -e GITHUB_RUN_NUMBER -e GITHUB_ACTOR -e GITHUB_WORKFLOW -e GITHUB_HEAD_REF -e GITHUB_BASE_REF -e GITHUB_EVENT_NAME -e GITHUB_SERVER_URL -e GITHUB_API_URL -e GITHUB_GRAPHQL_URL -e GITHUB_WORKSPACE -e GITHUB_ACTION -e GITHUB_EVENT_PATH -e RUNNER_OS -e RUNNER_TOOL_CACHE -e RUNNER_TEMP -e RUNNER_WORKSPACE -e ACTIONS_RUNTIME_URL -e ACTIONS_RUNTIME_TOKEN -e ACTIONS_CACHE_URL -e GITHUB_ACTIONS=true -e CI=true -v "/var/run/docker.sock":"/var/run/docker.sock" -v "/home/runner/work/_temp/_github_home":"/github/home" -v "/home/runner/work/_temp/_github_workflow":"/github/workflow" -v "/home/runner/work/docker-action/docker-action":"/github/workspace" 3888d3:d2f2296a374941dda5ba6d3c261db156  "Mr. Stark"
+2020-06-04T06:37:23.7369997Z Hello Mr. Stark
+2020-06-04T06:37:23.9082336Z ##[group]Run echo "The time was Thu Jun 4 06:37:23 UTC 2020"
+2020-06-04T06:37:23.9082554Z [36;1mecho "The time was Thu Jun 4 06:37:23 UTC 2020"[0m
+2020-06-04T06:37:23.9124462Z shell: /bin/bash -e {0}
+2020-06-04T06:37:23.9124645Z ##[endgroup]
+2020-06-04T06:37:23.9207620Z The time was Thu Jun 4 06:37:23 UTC 2020
+2020-06-04T06:37:23.9215986Z Cleaning up orphan processes
